@@ -15,6 +15,7 @@
 (global-linum-mode t)
 (add-to-list 'load-path "~/.emacs.d/3rd/")
 (add-to-list 'load-path "~/.emacs.d/ext")
+(add-to-list 'load-path "~/.emacs.d/3rd/less-css-mode")
 
 (setq inhibit-splash-screen t)
 (require 'color-theme)
@@ -28,7 +29,12 @@
       (cons '("\\.persona" . markdown-mode)
 	    (cons '("\\.md" . markdown-mode) auto-mode-alist)))
 
+(autoload 'less-css-mode "less-css-mode.el" "Major mode for editing less files" t)
+(setq auto-mode-alist 
+      (cons '("\\.less" . less-css-mode) auto-mode-alist))
+
 (load (expand-file-name "/home/johlrogge/quicklisp/slime-helper.el"))
+
 (setq inferior-lisp-program "sbcl")
 
 (load  "hippie-settings.el")
