@@ -1,3 +1,6 @@
 [submodule "3rd/less-css-mode"]
 	path = 3rd/less-css-mode
 	url = git@github.com:purcell/less-css-mode.git
+[submodule "3rd/helm"]
+	path = 3rd/helm
+	url = https://github.com/emacs-helm/helm.git
