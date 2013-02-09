@@ -13,6 +13,8 @@
  )
 
 (global-linum-mode t)
+(setq-default indent-tabs-mode nil)
+
 (add-to-list 'load-path "~/.emacs.d/3rd/")
 (add-to-list 'load-path "~/.emacs.d/ext")
 (add-to-list 'load-path "~/.emacs.d/3rd/less-css-mode")
@@ -50,4 +52,6 @@
 (require 'helm-config)
 (require 'helm-ls-git)
 (global-set-key (kbd "C-c h") 'helm-mini)
+(global-set-key (kbd "C-c g") 'helm-ls-git-ls)
+(global-set-key (kbd "C-c l") 'helm-locate)
 (helm-mode 1)
