@@ -4,3 +4,6 @@
 [submodule "3rd/helm"]
 	path = 3rd/helm
 	url = https://github.com/emacs-helm/helm.git
+[submodule "3rd/helm-ls-git"]
+	path="3rd/helm-ls-git"
+	url = git://github.com/emacs-helm/helm-ls-git.git
