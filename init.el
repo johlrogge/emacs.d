@@ -20,6 +20,7 @@
 (add-to-list 'load-path "~/.emacs.d/3rd/less-css-mode")
 (add-to-list 'load-path "~/.emacs.d/3rd/helm")
 (add-to-list 'load-path "~/.emacs.d/3rd/helm-ls-git")
+(add-to-list 'load-path "~/.emacs.d/3rd/flyspell")
 
 (setq inhibit-splash-screen t)
 (require 'color-theme)
@@ -27,6 +28,10 @@
 (color-theme-clarity)
 
 (tool-bar-mode -1)
+
+(autoload 'flyspell-mode "flyspell-1.7p.el" "On-the-fly spelling checker." t)
+(add-hook 'org-mode-hook 'flyspell-mode)
+(add-hook 'js-mode-hook 'flyspell-prog-mode) 
 
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
 (setq auto-mode-alist 
