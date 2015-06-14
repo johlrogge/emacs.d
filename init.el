@@ -21,9 +21,12 @@
 (add-to-list 'load-path "~/.emacs.d/3rd/helm")
 (add-to-list 'load-path "~/.emacs.d/3rd/helm-ls-git")
 (add-to-list 'load-path "~/.emacs.d/3rd/flyspell")
+(add-to-list 'load-path "~/.emacs.d/3rd/dash")
+(add-to-list 'load-path "~/.emacs.d/3rd/smartparens")
 
 (setq inhibit-splash-screen t)
 (require 'color-theme)
+
 (color-theme-initialize)
 (color-theme-clarity)
 
@@ -46,16 +49,12 @@
 
 (setq inferior-lisp-program "sbcl")
 
-(load  "hippie-settings.el")
-(load "parencycle-settings.el")
-
-(autoload 'sibilant-mode "sibilant-mode.el" "Major mode for editing Sibilant" t)
-(setq auto-mode-alist
-      (cons '("\\.sibilant" . sibilant-mode) auto-mode-alist))
-
+(load "hippie-settings.el")
+(load "smartparens-init.el")
 
 (require 'helm-config)
 (require 'helm-ls-git)
+
 (global-set-key (kbd "C-c h") 'helm-mini)
 (global-set-key (kbd "C-c g") 'helm-ls-git-ls)
 (global-set-key (kbd "C-c l") 'helm-locate)

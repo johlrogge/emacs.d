@@ -7,3 +7,9 @@
 [submodule "3rd/helm-ls-git"]
 	path="3rd/helm-ls-git"
 	url = git://github.com/emacs-helm/helm-ls-git.git
+[submodule "3rd/smartparens"]
+	path = 3rd/smartparens
+	url = https://github.com/Fuco1/smartparens.git
+[submodule "3rd/dash"]
+	path = 3rd/dash
+	url = https://github.com/magnars/dash.el.git
