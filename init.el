@@ -16,7 +16,7 @@
 (setq-default indent-tabs-mode nil)
 
 (add-to-list 'load-path "~/.emacs.d/3rd/")
-(add-to-list 'load-path "~/.emacs.d/ext")
+(add-to-list 'load-path "~/.emacs.d/ext/")
 (add-to-list 'load-path "~/.emacs.d/3rd/less-css-mode")
 (add-to-list 'load-path "~/.emacs.d/3rd/helm")
 (add-to-list 'load-path "~/.emacs.d/3rd/helm-ls-git")
@@ -52,10 +52,4 @@
 (load "hippie-settings.el")
 (load "smartparens-init.el")
 
-(require 'helm-config)
-(require 'helm-ls-git)
-
-(global-set-key (kbd "C-c h") 'helm-mini)
-(global-set-key (kbd "C-c g") 'helm-ls-git-ls)
-(global-set-key (kbd "C-c l") 'helm-locate)
-(helm-mode 1)
+(load "helm-cfg")
