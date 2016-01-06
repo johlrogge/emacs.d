@@ -13,3 +13,9 @@
 [submodule "3rd/dash"]
 	path = 3rd/dash
 	url = https://github.com/magnars/dash.el.git
+[submodule "3rd/rust-mode"]
+	path = 3rd/rust-mode
+	url = https://github.com/rust-lang/rust-mode.git
+[submodule "3rd/magit"]
+	path = 3rd/magit
+	url = git://github.com/magit/magit.git
