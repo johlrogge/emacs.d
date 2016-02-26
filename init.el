@@ -31,6 +31,8 @@
 (add-to-list 'load-path "~/.emacs.d/3rd/rust-mode")
 (add-to-list 'load-path "~/.emacs.d/3rd/magit/lisp")
 (add-to-list 'load-path "~/.emacs.d/3rd/magit")
+(add-to-list 'load-path "~/.emacs.d/3rd/arduino-mode")
+(add-to-list 'load-path "~/.emacs.d/3rd/ergoemacs-mode")
 
 (setq inhibit-splash-screen t)
 (require 'color-theme)
@@ -57,6 +59,10 @@
 (setq auto-mode-alist 
       (cons '("\\.less" . less-css-mode) auto-mode-alist))
 
+(autoload 'arduino-mode "arduino-mode.el" "Major mode for editing arduino files" t)
+(setq auto-mode-alist
+      (cons '("\\.pde" . arduino-mode) auto-mode-alist))
+
 (load (expand-file-name "/home/johlrogge/quicklisp/slime-helper.el"))
 
 (setq inferior-lisp-program "sbcl")
@@ -67,6 +73,7 @@
 (load "rust-mode.el")
 (load "helm-cfg")
 (load "magit-cfg")
+(load "ergoemacs-cfg")
 
 (global-set-key "\C-\M-_" 'unscroll)
 (put 'upcase-region 'disabled nil)

@@ -19,3 +19,9 @@
 [submodule "3rd/magit"]
 	path = 3rd/magit
 	url = git://github.com/magit/magit.git
+[submodule "3rd/xah-fly-keys"]
+	path = 3rd/xah-fly-keys
+	url = git@github.com:xahlee/xah-fly-keys.git
+[submodule "3rd/ergoemacs-mode"]
+	path = 3rd/ergoemacs-mode
+	url = https://github.com/ergoemacs/ergoemacs-mode.git
